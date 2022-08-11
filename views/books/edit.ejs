@@ -1,6 +1,10 @@
-<h3>Edit Book</h3>
-<form action="/books/<%= book.id %>?_method=PUT" method="POST">
-    <%- include('_form_fields') %> 
-    <a href="/books">Cancel</a>
-    <button type="submit">Update</button>
-</form>
+<main>
+    <h3 class="heading">Edit Book</h3>
+    <form action="/books/<%= book.id %>?_method=PUT" method="POST">
+        <%- include('_form_fields') %>
+        <div class="input-form__buttons">  
+            <a href="/books" class="btn authors__btn">Cancel</a>
+            <button type="submit" class="btn submit-btn">Update</button>
+        </div>
+    </form>
+</main>

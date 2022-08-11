@@ -1,0 +1,210 @@
+@import 'shared/variables.css';
+@import 'shared/fonts.css';
+@import 'header.css';
+
+:root {
+    font-family: 'Exo 2';
+    font-size: 20px;
+    color: var(--color-text);
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--color-background);
+    margin: 0;
+    padding: 1rem 10rem;
+}
+
+header{
+    margin-bottom: 4rem;
+}
+
+main{
+    padding: 0 20px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.heading{
+    margin-top: 0;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.books{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    text-align: center;
+}
+
+.book__img{
+    width: 250px;
+    height: 350px;
+}
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+}
+.input-form__fields{
+    display: flex;
+    column-gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.input-form__input{
+    flex: 1;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background-color: var(--color-background-input);
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: var(--color-text);
+}
+
+.input-form__submit-btn{
+    font-size: 20px;
+    background-color: var(--color-background-button);
+}
+
+.authors{
+    display: flex;
+    flex-direction: column;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    column-gap: 5px;
+    background-color: var(--color-background-author);
+}
+
+.author:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.author__book{
+    padding: 0 20px;
+}
+
+.authors__name{
+    margin-right: auto;
+}
+
+.authors__btn{
+    font-size: 18px;
+    background-color: var(--color-background-button);
+}
+
+.delete-btn{
+    font-size: 18px;
+    background-color: var(--color-background-delete);
+}
+
+.submit-btn{
+    font-size: 18px;
+    background-color: var(--color-background-submit);
+}
+
+.authors__btn:hover, .delete-btn:hover, .submit-btn:hover{
+    cursor: pointer;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.form-field__label{
+    margin-bottom: 10px;
+}
+
+.input-form__buttons{
+    display: flex;
+    justify-content: end;
+    column-gap: 5px;
+}
+
+.author .heading{
+    margin-bottom: 0;
+    margin-right: auto;
+}
+
+.book-info{
+    display: flex;
+    column-gap: 50px;
+}
+
+.book__property{
+    color: gray;
+}
+
+.book__buttons{
+    display: flex;
+    column-gap: 5px;
+    margin: 15px 0;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.search-form__btn{
+    margin-left: auto;
+}
+
+.book-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.book-form__section{
+    display: flex;
+    column-gap: 10px;
+}
+
+.book-form__section > .form-field{
+    flex: 1;
+}
+
+.book-form__section .input-form__input{
+    width: 100%;
+}
+
+.filepond--root{
+    height: 400px!important;
+    margin: 0;
+}
+
+.filepond--item {
+    width: calc(50% - 0.5em);
+}
+
+.filepond--panel-root{
+    background-color: var(--color-background-input);
+}
+
+.description{
+    resize: none;
+    width: auto;
+}

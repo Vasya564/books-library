@@ -1,22 +1,42 @@
-<label>Title</label>
-<input type="text" name="title" value="<%= book.title %>">
-<label>Author</label>
-<select name="author">
-<% authors.forEach(author => { %> 
-    <% if (author.id === book.author){ %>
-        <option selected label="<%= author.name %>" value="<%= author.id %>">
-    <% } else { %>
-        <option label="<%= author.name %>" value="<%= author.id %>"></option>
-    <% } %>   
-<% }) %> 
-</select>
-<label>Publish Date</label>
-<input type="date" name="publishDate" 
-    value="<%= book.publishDate == null ? '' :
-    book.publishDate.toISOString().split('T')[0] %>">
-<label>Page Count</label>
-<input type="number" name="pageCount" min="1" value="<%= book.pageCount %>">
-<label>Cover</label>
-<input type="file" name="cover" class="filepond">
-<label>Description</label>
-<textarea name="description"><%= book.description %> </textarea>
+<section class="book-form">
+    <div class="book-form__section">
+        <div class="form-field">
+            <label class="form-field__label">Title</label>
+            <input type="text" name="title" value="<%= book.title %>" class="input-form__input">
+        </div>
+        <div class="form-field">
+            <label class="form-field__label">Author</label>
+            <select name="author" class="input-form__input">
+            <% authors.forEach(author => { %> 
+                <% if (author.id === book.author){ %>
+                    <option selected label="<%= author.name %>" value="<%= author.id %>">
+                <% } else { %>
+                    <option label="<%= author.name %>" value="<%= author.id %>"></option>
+                <% } %>   
+            <% }) %> 
+            </select>
+        </div>
+    </div>
+    <div class="book-form__section">
+        <div class="form-field">
+            <label class="form-field__label">Publish Date</label>
+            <input type="date" name="publishDate" 
+                value="<%= book.publishDate == null ? '' :
+                book.publishDate.toISOString().split('T')[0] %>" class="input-form__input">
+        </div>
+        <div class="form-field">
+            <label class="form-field__label">Page Count</label>
+            <input type="number" name="pageCount" min="1" value="<%= book.pageCount %>" class="input-form__input">
+        </div>
+    </div>
+    <div class="book-form__section">
+        <div class="form-field form-file">
+            <label class="form-field__label">Cover</label>
+            <input type="file" name="cover" class="filepond">
+        </div>
+        <div class="form-field">
+            <label class="form-field__label">Description</label>
+            <textarea name="description" class="input-form__input description"><%= book.description %> </textarea>
+        </div>
+    </div>
+</section>
